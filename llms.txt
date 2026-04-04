@@ -1,0 +1,27 @@
+# The Dependency Installer
+
+> npm install but for life — install self-confidence, motivation, and other life packages.
+
+## Tech Stack
+- React 18, TypeScript, Vite, Tailwind CSS
+- Framer Motion, canvas-confetti, html2canvas, Web Audio API, Lucide React
+
+## Key Files
+- src/App.tsx — Main application component
+- src/components/ — UI components (terminal, dependency tree, etc.)
+- src/data/ — Life packages, vulnerability data, npx commands
+- src/hooks/ — Custom React hooks
+- src/utils/ — Utility functions
+
+## Features
+- Life package installation with realistic progress
+- Vulnerability scanner for emotional dependencies
+- Dependency tree visualization
+- Install failures for impossible packages
+- package.json of life generator
+- npx life commands
+- Achievement system
+
+## URLs
+- Live: https://the-dependency-installer.netlify.app
+- Repo: https://github.com/arnoldwender/the-dependency-installer

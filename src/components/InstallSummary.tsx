@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { RefreshCw, Package, AlertTriangle, HardDrive, Clock } from "lucide-react";
 
 interface InstallSummaryProps {
@@ -6,8 +7,14 @@ interface InstallSummaryProps {
   onReset: () => void;
 }
 
+/* Generate a random disk space value outside the render path */
+function randomDiskSpace(): number {
+  return Math.floor(Math.random() * 900 + 100);
+}
+
 export function InstallSummary({ totalPackages, totalVulns, onReset }: InstallSummaryProps) {
-  const diskSpace = Math.floor(Math.random() * 900 + 100);
+  /* Lazy initializer ensures value is computed once on mount */
+  const [diskSpace] = useState(randomDiskSpace);
 
   return (
     <div className="animate-pkg-in">

@@ -106,7 +106,9 @@ export function NpxCommands({ onRun, soundEnabled = true }: NpxCommandsProps) {
                     initial={{ opacity: 0, x: -5 }}
                     animate={{ opacity: 1, x: 0 }}
                     className={`text-[0.62rem] leading-[1.8] ${
-                      line.startsWith("npm ERR!") || line.startsWith("ERR!")
+                      !line
+                        ? "text-terminal/50"
+                        : line.startsWith("npm ERR!") || line.startsWith("ERR!")
                         ? "text-red-500"
                         : line.startsWith("npm WARN") || line.startsWith("warning:")
                         ? "text-amber-500"

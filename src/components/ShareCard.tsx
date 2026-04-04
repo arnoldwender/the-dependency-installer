@@ -111,7 +111,7 @@ export function ShareCard({ installed, totalVulns, totalPackages, onGenerate }: 
             </div>
           </div>
           <div style={{ marginTop: "16px", fontSize: "10px", opacity: 0.25, letterSpacing: "2px" }}>
-            npminstall.life -- BUILT BY WENDER MEDIA
+            npminstall.life -- BUILT BY ARNOLD WENDER
           </div>
         </div>
       </div>

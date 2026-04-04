@@ -6,6 +6,8 @@ export const INSTALL_MESSAGES = [
   "warning: motivation@0.0.1 requires happiness@^1.0.0 (not installed)",
   "Linking binaries to your frontal lobe...",
   "warning: coffee-dependency has 1 high severity vulnerability",
+  "Compiling emotional baggage... this may take a while",
+  "Deduplicating excuses... found 847 duplicates",
   "Auditing your decisions...",
   "found 418 vulnerabilities (12 moderate, 406 critical)",
   "Run `npm audit fix` to fix them, or `npm audit fix --force` to make things worse",
@@ -17,4 +19,6 @@ export const ERROR_MESSAGES = [
   "npm ERR! work-life-balance@2.0.0 is deprecated",
   "npm ERR! peer dep missing: sleep@>=8.0.0",
   "npm WARN: adulting requires node@>=18 but you're running on dreams",
+  "npm ERR! ERESOLVE unable to resolve dependency tree of your life",
+  "npm WARN: optional dependency chill@latest failed to install",
 ];

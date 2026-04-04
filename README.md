@@ -2,7 +2,7 @@
 
 **npm install but for your life. Finally get those missing packages.**
 
-Built by [Arnold Wender](https://github.com/arnoldwender)
+Built by [Arnold Wender](https://arnoldwender.com)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Dependency%20Installer-00cc88?style=for-the-badge)](https://the-dependency-installer.netlify.app)
 

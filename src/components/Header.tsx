@@ -25,7 +25,7 @@ export function Header() {
       className="text-center mb-8 border-b border-terminal/20 pb-6"
     >
       <div className="text-[0.65rem] tracking-[6px] text-terminal/30 mb-2">
-        WENDER MEDIA EXISTENTIAL PACKAGE MANAGER
+        ARNOLD WENDER EXISTENTIAL PACKAGE MANAGER
       </div>
 
       <h1 className="flex items-center justify-center gap-3 text-terminal font-normal m-0 mb-1 tracking-[4px] title-glow text-2xl sm:text-3xl md:text-4xl">

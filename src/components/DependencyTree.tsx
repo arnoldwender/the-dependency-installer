@@ -69,7 +69,7 @@ export function DependencyTree({ packageName, onView }: DependencyTreeProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   /* Find matching tree or use default */
-  const slug = packageName.toLowerCase().replace(/\s/g, "-");
+  const slug = (packageName || "").toLowerCase().replace(/\s/g, "-");
   const tree = DEPENDENCY_TREES[slug] || DEPENDENCY_TREES["default"];
 
   function handleToggle() {

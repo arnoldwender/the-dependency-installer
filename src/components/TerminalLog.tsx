@@ -7,7 +7,8 @@ interface TerminalLogProps {
   phase: Phase;
 }
 
-function getLogColor(log: string): string {
+function getLogColor(log: string | undefined): string {
+  if (!log) return "text-terminal/50";
   if (log.startsWith("npm ERR!")) return "text-red-500";
   if (log.startsWith("npm WARN") || log.startsWith("warning:")) return "text-amber-500";
   if (log.startsWith(">")) return "text-terminal";
@@ -50,7 +51,7 @@ export function TerminalLog({ logs, progress, phase }: TerminalLogProps) {
         className="bg-[#010a01] border border-terminal/10 p-3 h-[220px] overflow-y-auto
                    text-[0.68rem] leading-[1.9] scrollbar-thin"
       >
-        {logs.map((log, i) => (
+        {logs.filter(Boolean).map((log, i) => (
           <div key={i} className={`${getLogColor(log)} log-glow`}>
             {log}
           </div>

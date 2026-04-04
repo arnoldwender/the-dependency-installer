@@ -1,0 +1,36 @@
+# The Dependency Installer
+
+> A satirical web app simulating npm install with humorous "life packages"
+
+## What This Project Is
+
+The Dependency Installer (also called "NPM Install Life") is an interactive, client-side React web application that parodies the experience of running `npm install`. Users type a package name, and the app simulates a terminal install process complete with fake dependency resolution, vulnerability warnings, and absurd package sizes. The packages are satirical life concepts like "monday-morning", "motivation", "adulting", and "existential-dread".
+
+## Tech Stack
+
+- React 18 with TypeScript (strict mode)
+- Vite 5 for development and bundling
+- Tailwind CSS 3 for styling
+- Lucide React for icons
+- No backend — fully client-side
+
+## Repository Structure
+
+- `src/components/` — React UI components (Header, InputBar, TerminalLog, PackageList, InstallSummary, IdleState, Footer)
+- `src/data/packages.ts` — Parody package definitions with the `LifePackage` interface
+- `src/data/messages.ts` — Simulated npm terminal output messages
+- `src/hooks/useInstaller.ts` — Core state machine managing idle → installing → done phases
+- `src/utils/glitch.ts` — Text corruption effect for the header
+- `src/index.css` — Custom CSS animations (scanlines, vignette, glitch)
+- `tailwind.config.js` — Custom theme with terminal green (#00ff41) and mono font stack
+
+## Key Commands
+
+- `npm run dev` — Development server (localhost:5173)
+- `npm run build` — Production build
+- `npm run lint` — ESLint checks
+- `npm run typecheck` — TypeScript type checking
+
+## How It Works
+
+The `useInstaller` hook manages three phases: idle (waiting for input), installing (animating log output and progress bar), and done (showing results). Package data and log messages are static arrays. The UI uses a retro terminal aesthetic with green-on-black text, scanline overlays, and glitch effects.

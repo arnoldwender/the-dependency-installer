@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Terminal } from "lucide-react";
 import { glitchText } from "../utils/glitch";
 
@@ -17,7 +18,12 @@ export function Header() {
   }, []);
 
   return (
-    <div className="text-center mb-8 border-b border-terminal/20 pb-6">
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="text-center mb-8 border-b border-terminal/20 pb-6"
+    >
       <div className="text-[0.65rem] tracking-[6px] text-terminal/30 mb-2">
         WENDER MEDIA EXISTENTIAL PACKAGE MANAGER
       </div>
@@ -37,6 +43,6 @@ export function Header() {
         <span>9,847 PACKAGES</span>
         <span>418 VULNS</span>
       </div>
-    </div>
+    </motion.div>
   );
 }

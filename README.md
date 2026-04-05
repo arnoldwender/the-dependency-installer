@@ -25,6 +25,10 @@ Ever wished you could just `npm install self-confidence`? Now you can. The Depen
 - **package.json of Life** — Your complete life configuration file
 - **npx Commands** — Run life commands like `npx create-good-day`
 - **Achievements** — Unlock badges for installing the hard-to-get packages
+- **Enhanced Bundle Treemap** — Visualize your bloated node_modules with 18 hilariously oversized packages
+- **Lockfile Conflict Simulator** — Experience the chaos of merge conflicts in package-lock.json
+- **Enhanced Changelog** — 16-entry version history of npm's most questionable updates
+- **Pro Tier with Payment Failures** — Escalating payment rejection messages that get increasingly personal
 
 ## Tech Stack
 

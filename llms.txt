@@ -9,6 +9,10 @@
 ## Key Files
 - src/App.tsx — Main application component
 - src/components/ — UI components (terminal, dependency tree, etc.)
+- src/components/NodeModulesTreemap.tsx — Enhanced bundle treemap (18 items)
+- src/components/LockfileConflict.tsx — Lockfile conflict simulator
+- src/components/ChangelogProTier.tsx — Enhanced changelog and Pro Tier
+- src/components/CliMode.tsx — CLI mode interface
 - src/data/ — Life packages, vulnerability data, npx commands
 - src/hooks/ — Custom React hooks
 - src/utils/ — Utility functions
@@ -21,6 +25,10 @@
 - package.json of life generator
 - npx life commands
 - Achievement system
+- Enhanced Bundle Treemap (18 items)
+- Lockfile Conflict simulator
+- Enhanced Changelog (16 entries)
+- Pro Tier with escalating payment failures
 
 ## URLs
 - Live: https://the-dependency-installer.netlify.app

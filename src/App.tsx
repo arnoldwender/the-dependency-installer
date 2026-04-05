@@ -15,11 +15,17 @@ import { ShareCard } from "./components/ShareCard";
 import { SoundToggle } from "./components/SoundToggle";
 import { AchievementToast } from "./components/AchievementToast";
 import { AchievementList } from "./components/AchievementList";
+import { NodeModulesTreemap } from "./components/NodeModulesTreemap";
+import { LockfileConflict } from "./components/LockfileConflict";
+import { NpmAuditOutput } from "./components/NpmAuditOutput";
+import { ChangelogProTier } from "./components/ChangelogProTier";
+import { CliMode, CliModeToggle } from "./components/CliMode";
 import { useInstaller } from "./hooks/useInstaller";
 import { useAchievements } from "./hooks/useAchievements";
 
 export default function App() {
   const [input, setInput] = useState("");
+  const [cliMode, setCliMode] = useState(false);
   const {
     phase,
     logs,
@@ -128,8 +134,16 @@ export default function App() {
         onDismiss={dismissPending}
       />
 
+      {/* CLI Mode — full-screen terminal overlay */}
+      <CliMode isOpen={cliMode} onClose={() => setCliMode(false)} soundEnabled={soundEnabled} />
+
       <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-8 relative z-10">
         <Header />
+
+        {/* CLI mode toggle — below the header */}
+        <div className="flex justify-center mb-4">
+          <CliModeToggle onClick={() => setCliMode(true)} />
+        </div>
 
         {/* Global install counter */}
         <GlobalCounter />
@@ -153,6 +167,15 @@ export default function App() {
 
             {/* Dependency tree */}
             <DependencyTree packageName={input} onView={handleTreeView} />
+
+            {/* node_modules treemap — bundle analyzer style */}
+            <NodeModulesTreemap />
+
+            {/* Realistic npm audit output */}
+            <NpmAuditOutput />
+
+            {/* Lockfile conflict simulator */}
+            <LockfileConflict />
 
             {/* Install summary */}
             <InstallSummary
@@ -181,6 +204,9 @@ export default function App() {
 
             {/* Package.json viewer */}
             <LifePackageJson onEdit={handleJsonEdit} />
+
+            {/* Changelog and pro tier */}
+            <ChangelogProTier />
 
             {/* Achievements list */}
             <AchievementList allAchievements={allAchievements} unlocked={unlocked} />

@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TerminalSquare, X } from "lucide-react";
-import { LIFE_PACKAGES, NPX_COMMANDS, VULNERABILITY_SCAN, LIFE_PACKAGE_JSON } from "../data/packages";
+import { LIFE_PACKAGES, NPX_COMMANDS, LIFE_PACKAGE_JSON } from "../data/packages";
 import { AUDIT_ADVISORIES, AUDIT_SUMMARY } from "../data/audit";
 import { playTypeSound } from "../utils/sounds";
 

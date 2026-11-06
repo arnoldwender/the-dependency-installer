@@ -8,7 +8,7 @@ import {
   type VulnEntry,
 } from "../data/packages";
 import { INSTALL_MESSAGES, ERROR_MESSAGES } from "../data/messages";
-import { playTypeSound, playSuccessChime, playErrorBuzz, playWarningBeep } from "../utils/sounds";
+import { playTypeSound, playSuccessChime, playErrorBuzz } from "../utils/sounds";
 import { fireTerminalConfetti } from "../utils/confetti";
 import { incrementLocalCount } from "../utils/counter";
 
